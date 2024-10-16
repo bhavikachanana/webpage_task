@@ -1,0 +1,212 @@
+
+
+
+        /* Custom styles for navbar */
+        
+        body{
+
+            margin:50px;
+            background-color: #f7f7f7;
+            font-family: 'Montserrat', sans-serif;
+            
+
+        }
+        .navbar-custom {
+            border-bottom: 2px solid #000; /* Bottom border as per design */
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: relative;
+            padding: 0 1.5rem;
+        }
+
+        /* Borders for "BORCELLE" */
+        .navbar-brand::before,
+        .navbar-brand::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 120%;
+            background-color: #000;
+        }
+
+        .navbar-brand::before {
+            left: -15px;
+        }
+
+        .navbar-brand::after {
+            right: -15px;
+        }
+
+        .nav-link {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #000;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #555;
+        }
+
+        .header-section {
+            text-align: center;
+            padding: 80px 20px; /* Space for the 'New Home Collection' */
+            background-image: url('https://via.placeholder.com/1200x400'); /* Dummy background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* Text color for contrast */
+        }
+        .header-section h1 {
+            font-size: 3rem; /* Larger heading for 'NEW HOME COLLECTION' */
+            font-weight: bold;
+        }
+        .btn-shop {
+            background-color: #007bff; /* Button color */
+            color: #fff;
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+        /* .home-collection {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .home-collection h1 {
+            font-size: 6rem;
+            font-weight: 100;
+            margin-bottom: 15px;
+            letter-spacing: 9px;
+        } */
+
+        .product-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 250px;
+        }
+
+        .card {
+            border: none;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .btn-custom {
+            background-color: #ccc;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+        .card{
+            width: 100%;
+            
+        }
+
+        .btn-custom:hover {
+            background-color: #bbb;
+        }
+        .card-body{
+            background-color: #f7f7f7 ;  
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #aaa;
+        }
+        .card-img-top{
+            border: 1px solid black;
+        }
+        .product-title{
+            font-size: 3rem; 
+            font-weight:100;
+        }
+
+        button{
+  background-color: #dcd3ca;
+  border-radius: 100px;
+  border: 2px black solid;
+  text-align: center;
+}
+
+.large-icon {
+    font-size: 24px; /* Adjust the size */
+  }
+
+.title{
+  line-height: 100%;
+}
+
+.border-rounded{
+  border-radius: 100px;
+}
+
+.quantity-button {
+  cursor: pointer; /* Change cursor to pointer for better UX */
+  font-size: 10px;
+}
+
+.quantity-value {
+  margin: 0 10px; /* Optional: spacing between buttons and value */
+}
+.centerr{
+    max-width: 99%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+        @media (max-width: 768px) {
+            .card img {
+                height: 150px;
+            }
+
+            .product-title  {
+                font-size: 1.5rem;
+            }
+
+           }
+
+        
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                order: 0;
+                margin: auto;
+            }
+
+            .navbar-nav {
+                text-align: center;
+            }
+            /* .home-collection h1 {
+                font-size: 6rem;
+            } */
+            /* .home-collection{
+                text-align: center;
+                justify-content: center;
+            } */
+        }
+       
+    

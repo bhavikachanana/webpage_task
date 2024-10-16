@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+
+     <link rel="stylesheet" href="style.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href=
+    "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+
+        
+        .navbar-custom {
+            border-bottom: 2px solid #000; /* Bottom border as per design */
+        }
+        body{
+
+            margin:50px;
+            background-color: #f7f7f7;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: relative;
+            padding: 0 1.5rem;
+        }
+
+        /* Borders for "BORCELLE" */
+        .navbar-brand::before,
+        .navbar-brand::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 120%;
+            background-color: #000;
+        }
+
+        .navbar-brand::before {
+            left: -15px;
+        }
+
+        .navbar-brand::after {
+            right: -15px;
+        }
+
+        .nav-link {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #000;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #555;
+        }
+
+        .header-section {
+            text-align: center;
+            padding: 80px 20px; /* Space for the 'New Home Collection' */
+            background-image: url('https://via.placeholder.com/1200x400'); /* Dummy background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* Text color for contrast */
+        }
+        .header-section h1 {
+            font-size: 3rem; /* Larger heading for 'NEW HOME COLLECTION' */
+            font-weight: bold;
+        }
+        .btn-shop {
+            background-color: #007bff; /* Button color */
+            color: #fff;
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+       
+
+        .product-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 250px;
+        }
+
+        .card {
+            border: none;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .btn-custom {
+            background-color: #ccc;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+        .card{
+            width: 100%;
+            
+        }
+
+        .btn-custom:hover {
+            background-color: #bbb;
+        }
+        .card-body{
+            background-color: #f7f7f7 ;  
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #aaa;
+        }
+        .card-img-top{
+            border: 1px solid black;
+        }
+        .product-title{
+            font-size: 3rem; 
+            font-weight:100;
+        }
+
+        button{
+  background-color: #dcd3ca;
+  border-radius: 100px;
+  border: 2px black solid;
+  text-align: center;
+}
+
+.large-icon {
+    font-size: 24px; /* Adjust the size */
+  }
+
+.title{
+  line-height: 100%;
+}
+
+.border-rounded{
+  border-radius: 100px;
+}
+
+.quantity-button {
+  cursor: pointer; /* Change cursor to pointer for better UX */
+  font-size: 10px;
+}
+
+.quantity-value {
+  margin: 0 10px; /* Optional: spacing between buttons and value */
+}
+.centerr{
+    max-width: 99%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+        @media (max-width: 768px) {
+            .card img {
+                height: 150px;
+            }
+
+            .product-title  {
+                font-size: 1.5rem;
+            }
+
+           }
+
+        
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                order: 0;
+                margin: auto;
+            }
+
+            .navbar-nav {
+                text-align: center;
+            }
+            
+        }
+       
+    </style>
+   
+</head>
+<body class="bg-light"> 
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+                <li style="list-style: none;" class="navbar-brand" href="#">BORCELLE</li>
+                <!-- <div class="col-lg-4 d-flex align-items-center justify-content-center px-3">
+                    <div class="fw-medium fs-2 border-start border-end border-3 border-dark text-center w-100 mx-5 pb-2 fw-semibold tracking-wider">
+                      <span>BORCELLE</span>
+                    </div>
+                  </div> -->
+            
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="home-collection text-center">
+        <h1 class="display-1 display-md-2 display-sm-3 display-xs-4">NEW HOME COLLECTION</h1>
+    </div>
+
+    <br>
+    <br>
+    <!-- <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="display-1 d-none d-lg-block">NEW HOME COLLECTION</h1>
+            <h1 class="display-2 d-none d-md-block d-lg-none">NEW HOME COLLECTION</h1>
+            <h1 class="display-3 d-none d-sm-block d-md-none">NEW HOME COLLECTION</h1>
+            <h1 class="display-4 d-sm-none">NEW HOME COLLECTION</h1>
+          </div>
+        </div>
+      </div> -->
+    <div>
+
+        <div class="container my-5">
+            <div class="row">
+               <div class="col-5">
+               <div class="col-lg-6 col-md-12 col-sm-12 ">
+              <h1 class="text-center product-title a">HOME PRODUCTS AND INTERIOR</h1>
+      
+              <div class="text-center mb-5">
+                  <button class="btn btn-custom  " style="background-color:#dcd3ca ;">Shop Now</button>
+
+                  <span> <i class="bi bi-arrow-right large-icon"></i>
+                </span>
+                  
+              </div>
+      
+              <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      
+                  </div>
+                  
+                  </div>
+                  
+      
+               </div>
+            </div>
+      
+                 <div class="col-lg-6 col-md-12 col-sm-12 ">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="row text-center">
+                              <div class="col-md-4">
+                                  <div class="card">
+                                      <img src="first.jpg" class="card-img-top" alt="Set of towels">
+                                      <div class="card-body ">
+                
+                                          <div class="row">
+                                            <p class="fw-semibold col-5">
+                                                $ 10.99
+                                            </p>
+                                            <div class="border border-1 border-dark d-flex justify-content-between align-items-center border-rounded col-6" style="height: 25px;">
+                                              <span class="quantity-button border rounded-circle px-1">-</span>
+                                              <span class="quantity-value">1</span>
+                                              <span class="quantity-button border rounded-circle px-1">+</span>
+                                          </div>
+                                          
+                                        </div>
+                                          <p class="card-text">Set of towels</p>
+                                          <p class="text-muted">+ More colors   <i class="bi bi-heart"></i></p>
+                                          
+                                          
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="card">
+                                      <img src="sec.jpg" class="card-img-top" alt="Interior decorations">
+                                      <div class="card-body">
+                                        <div class="row">
+                                            <p class="fw-semibold col-5">
+                                                $ 10.99
+                                            </p>
+                                            <div class="border border-1 border-dark d-flex justify-content-between align-items-center border-rounded col-6" style="height: 25px;">
+                                              <span class="quantity-button border rounded-circle px-1">-</span>
+                                              <span class="quantity-value">1</span>
+                                              <span class="quantity-button border rounded-circle px-1">+</span>
+                                          </div>
+                                          
+                                        </div>
+                                          <p class="card-text">Interior decorations</p>
+                                          <p class="text-muted">+ More colors  <i class="bi bi-heart"></i></p>
+                                          
+                                          
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="card ">
+                                      <img src="third.jpg" class="card-img-top" alt="Basket made of natural materials">
+                                      <div class="card-body">
+                                        <div class="row">
+                                            <p class="fw-semibold col-5">
+                                                $ 10.99
+                                            </p>
+                                            <div class="border border-1 border-dark d-flex justify-content-between align-items-center border-rounded col-6" style="height: 25px;">
+                                              <span class="quantity-button border rounded-circle px-1">-</span>
+                                              <span class="quantity-value">1</span>
+                                              <span class="quantity-button border rounded-circle px-1">+</span>
+                                          </div>
+                                          
+                                        </div>
+                                          <p class="card-text">Basket made of natural materials</p>
+                                          <p class="text-muted">+ More colors <i class="bi bi-heart"></i></p>
+                                          
+                                         
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Add more carousel items if necessary -->
+                  </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+          <div>
+    
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
